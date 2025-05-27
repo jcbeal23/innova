@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import React, { useEffect, useRef } from "react"
+import Image from "next/image"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { Code, Database, LineChart, Smartphone, Zap, CheckCircle } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -86,7 +87,9 @@ export default function ServicesSection() {
             >
               <Card className="h-full transition-all hover:shadow-lg">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                  <div className="rounded-full bg-primary/10 p-2">{service.icon}</div>
+                  <div className="rounded-full bg-primary/10 p-2">
+                    {service.icon && React.cloneElement(service.icon, { "aria-hidden": "true" })}
+                  </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -114,15 +117,15 @@ export default function ServicesSection() {
             </p>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
+                <CheckCircle aria-hidden="true" className="h-5 w-5 text-primary" />
                 <span>✅ Soluciones escalables y adaptables</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
+                <CheckCircle aria-hidden="true" className="h-5 w-5 text-primary" />
                 <span>✅ Tecnologías de vanguardia</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
+                <CheckCircle aria-hidden="true" className="h-5 w-5 text-primary" />
                 <span>✅ Enfoque centrado en resultados</span>
               </li>
             </ul>
@@ -135,10 +138,12 @@ export default function ServicesSection() {
               visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.2 } },
             }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
+            <Image
+              src="/images/services-section-background.jpg"
               alt="Equipo de tecnología de Innovación Tech Consulting colaborando en proyectos innovadores"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
+              width={600}
+              height={400}
             />
           </motion.div>
         </div>

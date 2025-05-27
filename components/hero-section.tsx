@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -58,7 +59,7 @@ export default function HeroSection() {
             >
               <Button asChild size="lg">
                 <Link href="#contacto">
-                  Solicitar Consultoría <ArrowRight className="ml-2 h-4 w-4" />
+                  Solicitar Consultoría <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
@@ -72,12 +73,13 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <img
+            <Image
               alt="Equipo de Innovación Tech Consulting trabajando en soluciones tecnológicas avanzadas"
               className="aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
-              height="550"
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
-              width="800"
+              height={550}
+              src="/images/hero-section-background.jpg"
+              width={800}
+              priority
             />
           </motion.div>
         </div>

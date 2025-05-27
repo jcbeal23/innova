@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -76,9 +77,11 @@ export default function BlogPreview() {
               }}
             >
               <Card className="h-full overflow-hidden transition-all hover:shadow-lg">
-                <img
+                <Image
                   src={post.image || "/placeholder.svg"}
-                  alt={`Imagen ilustrativa para el artículo: ${post.title}`}
+                  alt={post.alt || `Imagen ilustrativa para el artículo: ${post.title}`}
+                  width={post.imageWidth || 600}
+                  height={post.imageHeight || 338}
                   className="aspect-video w-full object-cover"
                 />
                 <CardHeader className="p-4">
@@ -91,7 +94,7 @@ export default function BlogPreview() {
                 <CardFooter className="p-4">
                   <Button asChild variant="ghost" className="w-full justify-center gap-1">
                     <Link href="#">
-                      Leer más <ArrowRight className="h-4 w-4" />
+                      Leer más <ArrowRight aria-hidden="true" className="h-4 w-4" />
                     </Link>
                   </Button>
                 </CardFooter>
@@ -102,7 +105,7 @@ export default function BlogPreview() {
         <div className="flex justify-center mt-10">
           <Button asChild variant="outline" size="lg">
             <Link href="#">
-              Ver todas las publicaciones <ArrowRight className="ml-2 h-4 w-4" />
+              Ver todas las publicaciones <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

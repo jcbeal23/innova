@@ -59,7 +59,7 @@ export default function Home() {
               <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-12 mt-12">
                 <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm transition-all hover:shadow-md">
                   <div className="rounded-full bg-primary/10 p-4">
-                    <CheckCircle className="h-6 w-6 text-primary" />
+                    <CheckCircle aria-hidden="true" className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">🏆 Experiencia Comprobada</h3>
                   <p className="text-center text-muted-foreground">
@@ -68,7 +68,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm transition-all hover:shadow-md">
                   <div className="rounded-full bg-primary/10 p-4">
-                    <CheckCircle className="h-6 w-6 text-primary" />
+                    <CheckCircle aria-hidden="true" className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">🎯 Soluciones Personalizadas</h3>
                   <p className="text-center text-muted-foreground">
@@ -78,7 +78,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm transition-all hover:shadow-md">
                   <div className="rounded-full bg-primary/10 p-4">
-                    <CheckCircle className="h-6 w-6 text-primary" />
+                    <CheckCircle aria-hidden="true" className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">🔍 Tecnología de Vanguardia</h3>
                   <p className="text-center text-muted-foreground">
@@ -122,21 +122,21 @@ export default function Home() {
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="flex items-start gap-2">
-                    <Phone className="mt-1 h-5 w-5 text-primary" />
+                    <Phone aria-hidden="true" className="mt-1 h-5 w-5 text-primary" />
                     <div className="grid gap-1">
                       <h3 className="text-base font-medium">📞 Teléfono</h3>
                       <p className="text-sm text-muted-foreground">+34 123 456 789</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Mail className="mt-1 h-5 w-5 text-primary" />
+                    <Mail aria-hidden="true" className="mt-1 h-5 w-5 text-primary" />
                     <div className="grid gap-1">
                       <h3 className="text-base font-medium">✉️ Email</h3>
                       <p className="text-sm text-muted-foreground">contacto@innovaciontech.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <MapPin className="mt-1 h-5 w-5 text-primary" />
+                    <MapPin aria-hidden="true" className="mt-1 h-5 w-5 text-primary" />
                     <div className="grid gap-1">
                       <h3 className="text-base font-medium">📍 Ubicación</h3>
                       <p className="text-sm text-muted-foreground">Calle Innovación 123, Madrid</p>
@@ -178,7 +178,7 @@ export default function Home() {
               name: "Innovación Tech Consulting",
               description:
                 "Consultoría de innovación tecnológica especializada en transformación digital, big data, desarrollo de software y aplicaciones móviles.",
-              logo: "/logo.png",
+              logo: "https://www.innovaciontech.com/placeholder-logo.png",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Calle Innovación 123",
@@ -207,7 +207,7 @@ export default function Home() {
               // Añadido para mejorar la indexación en Google
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": "/",
+                "@id": "https://www.innovaciontech.com/",
               },
               // Añadido para mejorar la indexación en Google
               hasOfferCatalog: {

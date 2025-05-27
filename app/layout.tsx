@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-        width: 2070,
-        height: 1380,
-        alt: "Innovación Tech Consulting - Soluciones tecnológicas avanzadas",
+        url: "https://www.innovaciontech.com/placeholder-logo.png",
+        width: 2070, // You might want to adjust this to the actual width of placeholder-logo.png
+        height: 1380, // You might want to adjust this to the actual height of placeholder-logo.png
+        alt: "Innovación Tech Consulting Logo",
       },
     ],
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "🚀 Innovación Tech Consulting | 💡 Expertos en Transformación Digital",
     description: "🔍 Consultoría especializada en innovación tecnológica para empresas líderes.",
-    images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"],
+    images: ["https://www.innovaciontech.com/placeholder-logo.png"],
   },
   robots: {
     index: true,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.innovaciontech.com/",
   },
   authors: [{ name: "Innovación Tech Consulting" }],
   generator: "Next.js",
